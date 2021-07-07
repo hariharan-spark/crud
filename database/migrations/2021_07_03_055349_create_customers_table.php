@@ -22,6 +22,8 @@ class CreateCustomersTable extends Migration
             $table->string('state');
             $table->string('country');
             $table->timestamps();
+            $table->softdeletes();
+
         });
     }
 

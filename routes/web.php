@@ -17,6 +17,10 @@ use App\Http\Controllers\CustomersController;
     // Route::get('/', function () {
     //     return view('welcome');
     // });
+ Route::get('/form', [CustomersController::class, 'index']);
+Route::post('/form', [CustomersController::class, 'insert'])->name('form');
+Route::get('/form/{id}', [CustomersController::class, 'show']); 
+Route::POST('/customers-update', [CustomersController::class, 'update'])->name('customers-update');
+Route::get('/customers-delete/{id}', [CustomersController::class, 'delete']);
 
-Route::get('/form', [CustomersController::class, 'index']);
-Route::post('/form', [CustomersController::class, 'create'])->name('form');
+
